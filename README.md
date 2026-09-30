@@ -1,6 +1,6 @@
 # CLEF eRisk 2026 — Task 1: Conversational Depression Detection
 
-Talk with an LLM persona and estimate depression without asking about it directly. The run predicts a BDI-II score (0–63), picks the main symptoms, and writes the eRisk submission files.
+Healthcare NLP system that talks with an LLM persona and predicts a BDI-II score (0–63) from the dialogue, without asking about depression directly. Each run also picks the main symptoms and writes the eRisk submission files.
 
 Symptom matching uses `all-MiniLM-L6-v2`. The checked-in config talks with **SmolLM2-360M-Instruct** on CPU (`config/config.yaml`). To use the official LoRA personas, set `use_open_slm: false` and point `base_model` at `meta-llama/Meta-Llama-3-8B-Instruct`. Personas come from the Hugging Face collection `irlab-udc/erisk2026`.
 
