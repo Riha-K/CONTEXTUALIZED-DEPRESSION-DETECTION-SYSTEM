@@ -1,0 +1,51 @@
+# eRisk 2026 Task 1 Configuration
+
+model:
+  # Small open SLM: 360M params = faster load on CPU (~30–60 sec first time).
+  base_model: "HuggingFaceTB/SmolLM2-360M-Instruct"  # SLM: 360M, open, fast
+  hf_collection: "irlab-udc/erisk2026"
+  use_open_slm: true  # Use open SLM only (no LLaMA LoRA adapters)
+  device: "cpu"  # Force CPU mode for local execution
+  load_in_8bit: false  # 8-bit quantization not available on CPU
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+
+conversation:
+  max_turns: 50
+  early_stop_threshold: 0.85  # Confidence threshold for early stopping
+  min_turns: 3  # Minimum turns before making prediction
+
+detection:
+  bdi_min_score: 0
+  bdi_max_score: 63
+  max_symptoms: 4
+  symptom_threshold: 0.3  # Minimum confidence for symptom detection
+
+submission:
+  output_dir: "./submissions"
+  max_runs: 3
+
+# BDI-II Symptoms (21 total)
+bdi_symptoms:
+  - "Sadness"
+  - "Pessimism"
+  - "Past Failure"
+  - "Loss of Pleasure"
+  - "Guilty Feelings"
+  - "Punishment Feelings"
+  - "Self-Dislike"
+  - "Self-Criticalness"
+  - "Suicidal Thoughts or Wishes"
+  - "Crying"
+  - "Agitation"
+  - "Loss of Interest"
+  - "Indecisiveness"
+  - "Worthlessness"
+  - "Loss of Energy"
+  - "Changes in Sleeping Pattern"
+  - "Irritability"
+  - "Changes in Appetite"
+  - "Concentration Difficulty"
+  - "Tiredness or Fatigue"
+  - "Loss of Interest in Sex"
