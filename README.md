@@ -20,8 +20,11 @@ Check the environment, then open the demo:
 
 ```bash
 python scripts/test_setup.py
+python scripts/verify_slm_usage.py
 streamlit run demo/app.py
 ```
+
+`verify_slm_usage.py` confirms the configured model is the small one rather than a larger checkpoint. On CPU the first model load takes about 30 to 60 seconds; run `python scripts/download_base_model.py` once beforehand to cache the weights and skip that wait.
 
 ## Run
 
