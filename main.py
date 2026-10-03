@@ -3,6 +3,7 @@ Main execution script for eRisk 2026 Task 1.
 """
 
 import argparse
+import sys
 import yaml
 import os
 from pathlib import Path
@@ -206,7 +207,7 @@ def main():
     # Validate run_id
     if not validate_run_id(args.run_id):
         print(f"Invalid run_id: {args.run_id}. Must be between 1 and 3.")
-        return
+        sys.exit(1)
     
     # Load configuration
     load_dotenv()
@@ -215,7 +216,7 @@ def main():
     
     if not hf_token:
         print("Error: HF_TOKEN not found in environment variables")
-        return
+        sys.exit(1)
     
     # Initialize submission generator
     generator = SubmissionGenerator(
@@ -239,7 +240,7 @@ def main():
     elif args.persona_id:
         if not validate_persona_id(args.persona_id):
             print(f"Invalid persona_id: {args.persona_id}. Must be between 1 and 20.")
-            return
+            sys.exit(1)
         
         conversation_log, result = process_persona(
             args.persona_id, args.run_id, config, hf_token
