@@ -108,6 +108,8 @@ class PersonaLoader:
         Returns:
             Tuple of (model, tokenizer) for the persona
         """
+        if persona_id < 1 or persona_id > 20:
+            raise ValueError(f"persona_id must be from 1 to 20, got {persona_id}")
         if persona_id in self.loaded_personas:
             return self.loaded_personas[persona_id]
         

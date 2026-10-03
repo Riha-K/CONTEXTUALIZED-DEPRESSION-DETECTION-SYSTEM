@@ -81,8 +81,11 @@ def run_automated_conversation(
     print(f"System prompt: {system_prompt[:100]}...\n")
     
     # Run conversation
-    max_turns = max_turns or config['conversation'].get('max_turns', 50)
+    if max_turns is None:
+        max_turns = config['conversation'].get('max_turns', 50)
     questions = selected_strategy['questions']
+    if not questions:
+        raise RuntimeError(f"strategy {selected_strategy['name']} has no questions")
     
     for turn in range(max_turns):
         # Select question (cycle through strategy questions)

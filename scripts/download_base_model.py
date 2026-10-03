@@ -19,8 +19,14 @@ def main():
     print("Pre-downloading base model (this makes 'Load Persona' faster later)...")
     
     config_path = Path("config/config.yaml")
+    if not config_path.exists():
+        print(f"Configuration file not found: {config_path}")
+        sys.exit(1)
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
+    if not config or "model" not in config:
+        print("config is missing the model section")
+        sys.exit(1)
     
     model_name = config["model"]["base_model"]
     hf_token = os.getenv("HF_TOKEN")

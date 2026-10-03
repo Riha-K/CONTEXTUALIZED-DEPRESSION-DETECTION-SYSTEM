@@ -35,7 +35,7 @@ def main():
     
     if not hf_token:
         print("Error: HF_TOKEN not found in .env file")
-        return
+        sys.exit(1)
     
     login(token=hf_token)
     
