@@ -4,6 +4,7 @@ Demonstrates basic usage of the system.
 """
 
 import os
+import sys
 import yaml
 from pathlib import Path
 from dotenv import load_dotenv
@@ -30,7 +31,7 @@ def main():
     hf_token = os.getenv('HF_TOKEN')
     if not hf_token:
         print("Error: HF_TOKEN not found in .env file")
-        return
+        sys.exit(1)
     
     # Initialize components
     print("\n1. Initializing components...")
@@ -48,7 +49,7 @@ def main():
     except Exception as e:
         print(f"   Error: {e}")
         print("   Note: Ensure you have access to the model and persona adapters")
-        return
+        sys.exit(1)
     
     # Initialize conversation
     print("\n3. Starting conversation...")

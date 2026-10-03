@@ -106,13 +106,14 @@ class ConversationManager:
         Returns:
             Persona's response
         """
-        # Add user message to history
+        if not user_message or not user_message.strip():
+            raise ValueError("user message is empty")
+
+        # Format before appending so the new turn is not sent twice.
         self.turn_count += 1
+        formatted_prompt = self.format_conversation(user_message)
         user_msg = Message(role="user", message=user_message, turn=self.turn_count)
         self.conversation_history.append(user_msg)
-        
-        # Format conversation
-        formatted_prompt = self.format_conversation(user_message)
         
         # Tokenize
         inputs = self.tokenizer(

@@ -81,9 +81,10 @@ class SubmissionGenerator:
         # Ensure predictions are in correct format
         formatted_predictions = []
         for pred in predictions:
+            score = int(pred.get("bdi-score", 0))
             formatted_pred = {
                 "LLM": str(pred.get("LLM", "")),
-                "bdi-score": int(pred.get("bdi-score", 0)),
+                "bdi-score": max(0, min(63, score)),
                 "key-symptoms": list(pred.get("key-symptoms", []))[:4]  # Max 4 symptoms
             }
             formatted_predictions.append(formatted_pred)
@@ -175,6 +176,10 @@ class SubmissionGenerator:
                     return False
                 if not isinstance(result["key-symptoms"], list):
                     print("key-symptoms must be a list")
+                    return False
+                score = result["bdi-score"]
+                if not isinstance(score, int) or score < 0 or score > 63:
+                    print("bdi-score must be an integer from 0 to 63")
                     return False
                 if len(result["key-symptoms"]) > 4:
                     print("key-symptoms must have at most 4 items")

@@ -162,7 +162,7 @@ class DepressionDetector:
                     )
                     max_similarity = float(np.max(similarities))
                     score += max_similarity * 0.5
-                except:
+                except Exception:
                     pass
             
             # Negative sentiment indicators
