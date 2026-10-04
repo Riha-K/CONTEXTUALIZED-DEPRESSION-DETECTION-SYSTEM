@@ -34,8 +34,13 @@ load_dotenv()
 def load_config():
     """Load configuration."""
     config_path = Path("config/config.yaml")
-    with open(config_path, 'r') as f:
-        return yaml.safe_load(f)
+    if not config_path.is_file():
+        raise FileNotFoundError(f"Missing config file: {config_path}")
+    with open(config_path, "r", encoding="utf-8") as f:
+        loaded = yaml.safe_load(f)
+    if not isinstance(loaded, dict):
+        raise ValueError(f"Config file is empty: {config_path}")
+    return loaded
 
 
 @st.cache_resource
