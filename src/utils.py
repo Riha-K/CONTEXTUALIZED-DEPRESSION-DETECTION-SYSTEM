@@ -94,6 +94,8 @@ def format_bdi_severity(bdi_score: int) -> str:
     Returns:
         Severity category string
     """
+    if bdi_score < 0 or bdi_score > 63:
+        return "Out of range"
     if bdi_score < 14:
         return "Minimal"
     elif bdi_score < 20:
