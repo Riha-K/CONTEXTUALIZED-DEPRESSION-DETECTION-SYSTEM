@@ -85,12 +85,18 @@ def test_model_access():
     """Test access to base model."""
     print("\nTesting model access...")
     try:
+        import yaml
         from huggingface_hub import model_info
         load_dotenv()
         token = os.getenv('HF_TOKEN')
-        
-        model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-        info = model_info(model_name, token=token)
+
+        config_path = Path("config/config.yaml")
+        with open(config_path, "r", encoding="utf-8") as f:
+            cfg = yaml.safe_load(f) or {}
+        model_name = (cfg.get("model") or {}).get(
+            "base_model", "HuggingFaceTB/SmolLM2-360M-Instruct"
+        )
+        model_info(model_name, token=token)
         print(f"[OK] Can access base model: {model_name}")
         return True
     except Exception as e:
