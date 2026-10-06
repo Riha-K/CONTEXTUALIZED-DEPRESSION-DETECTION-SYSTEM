@@ -1,5 +1,6 @@
 #!/bin/bash
 # Setup script for eRisk 2026 Task 1
+set -e
 
 echo "=========================================="
 echo "eRisk 2026 Task 1 - Setup Script"
