@@ -34,6 +34,8 @@ def check_model_sizes():
         print("   ✓ SLM confirmed: 7B parameters (Small Language Model)")
     elif "3B" in base_model or "3b" in base_model:
         print("   ✓ SLM confirmed: 3B parameters (Small Language Model)")
+    elif "360M" in base_model or "360m" in base_model:
+        print("   ✓ SLM confirmed: 360M parameters (Small Language Model)")
     else:
         print("   ⚠ Check model size - should be < 10B parameters")
     
