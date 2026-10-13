@@ -1,4 +1,5 @@
 @echo off
+setlocal
 REM Setup script for eRisk 2026 Task 1 (Windows)
 
 echo ==========================================
