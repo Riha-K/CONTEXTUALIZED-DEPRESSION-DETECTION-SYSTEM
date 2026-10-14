@@ -1,6 +1,6 @@
 # BDI-II Symptoms Reference
 
-The Beck Depression Inventory-II (BDI-II) consists of 21 symptoms. Each symptom can contribute 0-3 points to the total BDI-II score (range: 0-63).
+The Beck Depression Inventory-II (BDI-II) consists of 21 symptoms. Each symptom can contribute 0-3 points to the total BDI-II score (range: 0-63). A reply is matched with sentence embeddings and keyword patterns.
 
 ## Complete List of BDI-II Symptoms
 
