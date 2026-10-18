@@ -12,3 +12,4 @@ scikit-learn>=1.3.0
 pandas>=2.0.0
 tqdm>=4.66.0
 sentence-transformers>=2.2.0
+# Used for BDI-II symptom matching in the dialogue scorer.
