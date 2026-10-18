@@ -54,3 +54,4 @@ logs/
 
 # Streamlit
 .streamlit/
+*.egg-info/
