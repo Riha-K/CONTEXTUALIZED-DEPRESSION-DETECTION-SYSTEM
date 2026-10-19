@@ -10,6 +10,7 @@ pip install -r requirements.txt
 
 # Verify setup
 python scripts/test_setup.py
+# Optional: python scripts/verify_slm_usage.py
 ```
 
 ### 2. Configuration
