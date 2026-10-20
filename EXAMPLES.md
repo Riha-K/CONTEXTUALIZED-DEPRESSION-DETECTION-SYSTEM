@@ -1,6 +1,6 @@
 # Code Examples
 
-## Basic Usage
+## Basic Usage Examples
 
 ### Example 1: Single Persona Interaction
 
