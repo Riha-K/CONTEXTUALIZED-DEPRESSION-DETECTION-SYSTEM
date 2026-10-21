@@ -2,7 +2,7 @@
 
 ## System Overview
 
-The eRisk 2026 Task 1 system is designed to detect depression through conversational interactions with LLM personas. The architecture follows a modular design with clear separation of concerns.
+The eRisk 2026 Task 1 system is designed to detect depression through conversational interactions with LLM personas. The architecture follows a modular design with a clear separation of concerns.
 
 ## Components
 
