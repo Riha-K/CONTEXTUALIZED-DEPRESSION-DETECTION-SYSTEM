@@ -107,6 +107,13 @@ erisk-ppt/
 - Minimum turns required (default: 3)
 - Optimizes for early accurate detection
 
+### How a single turn is scored
+1. The persona reply is checked for keyword / pattern hits against the 21 BDI-II symptoms.
+2. The same reply is embedded and compared to symptom descriptions with sentence transformers.
+3. Negation cues can cancel a hit so “not sad” does not count as Sadness.
+4. Per-symptom strengths are combined into a running BDI-II style total (clamped to 0–63).
+5. If confidence is high enough after the minimum turn count, the run can stop early and write submission files.
+
 ## Conversation Strategies
 
 The system uses different strategies per run:
