@@ -1,6 +1,6 @@
 # Local Execution Guide
 
-## SLM Usage Verification ✅
+## SLM Usage Verification
 
 This project uses **Small Language Models (SLMs)** exclusively:
 
