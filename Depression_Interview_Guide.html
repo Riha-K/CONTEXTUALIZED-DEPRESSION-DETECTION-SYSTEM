@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Depression Detection — Interview Guide | Riha Sanjay Kokode</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#111318;--card:#161a22;--border:#232836;--text:#dde3f0;--muted:#6b7694;--bright:#fff;--blue:#5b9cf6;--gold:#f0b429;--green:#3ecf8e;--red:#f04e4e;--purple:#b57bee;--teal:#38d9d9;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.8;}
+.topbar{position:sticky;top:0;z-index:200;background:rgba(10,12,16,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.topbar-inner{display:flex;align-items:center;padding:0 24px;overflow-x:auto;scrollbar-width:none;}
+.topbar-inner::-webkit-scrollbar{display:none;}
+.topbar-brand{font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:var(--gold);white-space:nowrap;padding:14px 20px 14px 0;border-right:1px solid var(--border);margin-right:12px;}
+.topbar a{display:block;padding:13px 12px;text-decoration:none;color:var(--muted);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5px;white-space:nowrap;border-bottom:2px solid transparent;text-transform:uppercase;}
+.topbar a:hover{color:var(--bright);border-color:var(--gold);}
+.hero{background:linear-gradient(135deg,#0a0c10 0%,#0d1119 40%,#101520 100%);padding:56px 48px 44px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(91,156,246,.08) 0%,transparent 65%);pointer-events:none;}
+.hero-eyebrow{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,5vw,3.2rem);font-weight:800;color:var(--bright);line-height:1.05;}
+.hero h1 em{font-style:normal;color:var(--blue);}
+.hero-sub{margin-top:12px;color:var(--muted);font-size:14px;max-width:760px;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+.hero-tag{background:rgba(91,156,246,.1);border:1px solid rgba(91,156,246,.25);color:var(--blue);font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;}
+.main{max-width:1000px;margin:0 auto;padding:0 28px 100px;}
+.section{padding-top:60px;}
+[id]{scroll-margin-top:54px;}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.sec-title{font-family:'Syne',sans-serif;font-size:1.75rem;font-weight:800;color:var(--bright);margin-bottom:6px;line-height:1.1;}
+.sec-intro{color:#a8b4cc;font-size:14.5px;line-height:1.85;margin-bottom:24px;max-width:840px;border-left:3px solid var(--border);padding-left:16px;}
+.sec-intro strong{color:var(--bright);}
+.qa-block{margin:14px 0;}
+.qa{margin-bottom:18px;}
+.q{background:rgba(240,180,41,.07);border:1px solid rgba(240,180,41,.2);border-radius:6px 6px 0 0;padding:11px 16px;font-family:'Syne',sans-serif;font-size:12.5px;font-weight:700;color:var(--gold);}
+.a{background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px;padding:16px 18px;font-size:14px;color:#9daabf;line-height:1.85;}
+.a strong{color:var(--bright);}
+.a a{color:var(--blue);}
+.tip-box{background:rgba(62,207,142,.06);border:1px solid rgba(62,207,142,.2);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0;font-size:13px;color:#9dbfb0;}
+.tip-box strong{color:var(--bright);}
+.highlight-box{background:rgba(240,78,78,.05);border:1px solid rgba(240,78,78,.2);border-left:4px solid var(--red);border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0;font-size:13px;color:#c8a4a4;}
+.highlight-box strong{color:var(--bright);}
+.scrolltop{position:fixed;bottom:24px;right:24px;background:var(--gold);color:#000;border:none;cursor:pointer;width:42px;height:42px;border-radius:50%;font-size:1.1rem;z-index:999;}
+.code-inline{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal);}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-inner">
+  <div class="topbar-brand">Depression · Interview</div>
+  <a href="#pitch">Pitch</a>
+  <a href="#best">Best AI project</a>
+  <a href="#challenges">Challenges</a>
+  <a href="#novel">Novelty</a>
+  <a href="#repo">Repo</a>
+</div></div>
+
+<div class="hero">
+  <div class="hero-eyebrow">Project interview guide · Riha Sanjay Kokode</div>
+  <h1>Contextualized<br><em>Depression Detection</em></h1>
+  <p class="hero-sub">Conversational NLP/ML system for eRisk-style depression risk scoring from everyday chat — not a computer-vision project, and not thesis research. Ready answers for AI application forms and interviews.</p>
+  <div class="hero-tags">
+    <span class="hero-tag">NLP / ML</span>
+    <span class="hero-tag">BDI-II</span>
+    <span class="hero-tag">Embeddings</span>
+    <span class="hero-tag">LLM personas</span>
+    <span class="hero-tag">CPU / local</span>
+  </div>
+</div>
+
+<div class="main">
+
+<div id="pitch" class="section">
+  <div class="sec-label">00</div>
+  <h2 class="sec-title">One-line pitch</h2>
+  <p class="sec-intro">“I built an end-to-end system that estimates depression risk from normal conversation with an LLM persona, without asking about depression directly, then outputs a BDI-II style score and key symptoms.”</p>
+  <div class="highlight-box"><strong>Honesty:</strong> This is an NLP/ML project, not CV. It is a full project implementation of an eRisk-style setup — not my thesis research.</div>
+</div>
+
+<div id="best" class="section">
+  <div class="sec-label">01</div>
+  <h2 class="sec-title">Best AI/CV project — problem, approach, what you built</h2>
+  <div class="qa-block">
+    <div class="qa">
+      <div class="q">Q: Explain the best AI/CV project you have built. What problem were you solving, what was your approach, and what exactly did you build yourself?</div>
+      <div class="a">
+        My best AI project is a conversational depression-detection system (NLP/ML, not computer vision). The problem was to estimate depression risk from normal chat with an LLM persona, without asking about depression directly, then produce a BDI-II style score (0–63) and main symptoms.<br><br>
+        My approach: persona replies go through keyword patterns plus sentence embeddings (<span class="code-inline">all-MiniLM-L6-v2</span>) against 21 BDI symptoms, with negation checks, then a running score and optional early stop.<br><br>
+        I built the matching/scoring pipeline, conversation flow, local/CPU-friendly config, and submission-style outputs myself. It is a full project implementation of an eRisk-style setup, not my thesis research.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="challenges" class="section">
+  <div class="sec-label">02</div>
+  <h2 class="sec-title">Biggest technical challenges</h2>
+  <div class="qa-block">
+    <div class="qa">
+      <div class="q">Q: What were the biggest technical challenges or constraints you faced? How did you solve them?</div>
+      <div class="a">
+        The hardest part was inferring symptoms from everyday language without direct mental-health questions, so keyword-only matching gave many false hits. I combined embeddings with patterns and added negation handling so lines like “I’m not sad” do not count as sadness.<br><br>
+        Running models locally on CPU was another constraint, so I kept a small instruct-model path instead of a heavy setup. Deciding when to stop the chat was also tricky: too early meant a weak score, too late meant long runs. I used a confidence threshold plus a minimum number of turns.<br><br>
+        I also needed the score to be explainable, so I tracked per-symptom signals instead of one opaque number.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="novel" class="section">
+  <div class="sec-label">03</div>
+  <h2 class="sec-title">Novelty</h2>
+  <div class="qa-block">
+    <div class="qa">
+      <div class="q">Q: Did you develop or discover anything novel in your project?</div>
+      <div class="a">
+        I would not claim a new research algorithm or paper. What is mine is the end-to-end system: persona conversation, embedding-plus-keyword symptom matching, BDI-style scoring, early stopping, and submission outputs under local/CPU limits.<br><br>
+        The useful part for me was learning how evaluation-style scoring fails in practice — especially negation and over-counting — and tightening the pipeline so results are more stable and easier to explain. So the novelty is in the integrated design and debugging of the detection flow, not inventing a new model architecture.
+      </div>
+    </div>
+  </div>
+  <div class="tip-box"><strong>Say this if they push:</strong> “I am honest about scope. The value is a working, explainable pipeline I can defend end to end.”</div>
+</div>
+
+<div id="repo" class="section">
+  <div class="sec-label">04</div>
+  <h2 class="sec-title">Repo / individual contribution</h2>
+  <div class="qa-block">
+    <div class="qa">
+      <div class="q">Q: Share a direct project repository or demo link that demonstrates your individual contribution.</div>
+      <div class="a">
+        Repository: <a href="https://github.com/Riha-K/CONTEXTUALIZED-DEPRESSION-DETECTION-SYSTEM" target="_blank" rel="noopener">https://github.com/Riha-K/CONTEXTUALIZED-DEPRESSION-DETECTION-SYSTEM</a><br><br>
+        That repo is where my individual work lives: the detection and scoring pipeline, conversation handling, configuration for local runs, documentation, and submission-related outputs. I do not have a separate hosted demo link; the GitHub project is the main proof of what I built.<br><br>
+        If you need a GenAI/RAG example instead, I can share PolicyPilot, but for this AI detection work this depression project repo is the right one.
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<button class="scrolltop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</body>
+</html>
