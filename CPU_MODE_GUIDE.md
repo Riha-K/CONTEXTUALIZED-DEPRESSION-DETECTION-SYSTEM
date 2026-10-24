@@ -1,6 +1,6 @@
 # CPU Mode Execution Guide
 
-## ✅ Configuration Complete
+## Configuration Complete
 
 Your project is now configured for **CPU mode** execution. The configuration has been updated:
 
